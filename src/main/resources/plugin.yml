@@ -1,0 +1,36 @@
+author: eccentric_nz
+description: The periodic table, elements, compounds and cool sciencey things in Minecraft
+main: me.eccentric_nz.chemistry.Chemistry
+name: Chemistry
+load: POSTWORLD
+version: 1.0.0
+api-version: 1.14
+#website: http://dev.bukkit.org/projects/chemistry
+#dev-url: http://dev.bukkit.org/projects/chemistry
+#url: http://dev.bukkit.org/projects/chemistry
+permissions:
+  chemistry.use:
+    description: Allow a player to open the 'Atomic elements' creative GUI.
+    default: op
+  compound.use:
+    description: Allow a player to open the 'Chemical compounds' creative GUI.
+    default: op
+  reducer.use:
+    description: Allow a player to open the 'Material reducer' GUI.
+    default: op
+commands:
+  chemistry:
+    description: Open the 'Atomic elements' creative GUI.
+    usage: /<command>
+    permission: chemistry.use
+    permission-message: You don't have the permission <permission> to use this command
+  compound:
+    description: Open the 'Chemical compounds' creation GUI.
+    usage: /<command>
+    permission: compound.use
+    permission-message: You don't have the permission <permission> to use this command
+  reduce:
+    description: Open the 'Material reducer' GUI.
+    usage: /<command>
+    permission: reducer.use
+    permission-message: You don't have the permission <permission> to use this command
