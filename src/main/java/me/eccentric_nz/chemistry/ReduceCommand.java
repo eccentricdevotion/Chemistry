@@ -27,6 +27,10 @@ public class ReduceCommand implements CommandExecutor {
                 sender.sendMessage(plugin.pluginName + "Command can only be used by a player!");
                 return true;
             }
+            if (!player.hasPermission("chemistry.command")) {
+                sender.sendMessage(plugin.pluginName + "You don't have permission to open Chemistry GUIs by command!");
+                return true;
+            }
             // do stuff
             ItemStack[] menu = new ReducerInventory().getMenu();
             Inventory reductions = plugin.getServer().createInventory(player, 27, ChatColor.DARK_RED + "Material reducer");

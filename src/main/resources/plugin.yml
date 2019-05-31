@@ -9,28 +9,47 @@ api-version: 1.14
 #dev-url: http://dev.bukkit.org/projects/chemistry
 #url: http://dev.bukkit.org/projects/chemistry
 permissions:
-  chemistry.use:
-    description: Allow a player to open the 'Atomic elements' creative GUI.
+  chemistry.command:
+    description: Allow a player to open Chemistry GUIs by command.
     default: op
-  compound.use:
-    description: Allow a player to open the 'Chemical compounds' creative GUI.
+  chemistry.creative:
+    description: Allow a player to craft and open the 'Atomic elements' creative GUI.
+    default: op
+  compound.create:
+    description: Allow a player to craft and open the 'Chemical compounds' creative GUI.
     default: op
   reducer.use:
-    description: Allow a player to open the 'Material reducer' GUI.
+    description: Allow a player to craft and open the 'Material reducer' GUI.
+    default: op
+  products.craft:
+    description: Allow a player to craft and open the 'Product crafting' GUI.
+    default: op
+  lab.combine:
+    description: Allow a player to craft and open the 'Lab table' GUI.
     default: op
 commands:
   chemistry:
     description: Open the 'Atomic elements' creative GUI.
     usage: /<command>
-    permission: chemistry.use
+    permission: chemistry.creative
     permission-message: You don't have the permission <permission> to use this command
   compound:
     description: Open the 'Chemical compounds' creation GUI.
     usage: /<command>
-    permission: compound.use
+    permission: compound.create
     permission-message: You don't have the permission <permission> to use this command
   reduce:
     description: Open the 'Material reducer' GUI.
     usage: /<command>
     permission: reducer.use
+    permission-message: You don't have the permission <permission> to use this command
+  product:
+    description: Open the 'Product crafting' GUI.
+    usage: /<command>
+    permission: product.craft
+    permission-message: You don't have the permission <permission> to use this command
+  lab:
+    description: Open the 'Lab table' GUI.
+    usage: /<command>
+    permission: lab.combine
     permission-message: You don't have the permission <permission> to use this command
