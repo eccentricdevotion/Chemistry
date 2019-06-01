@@ -1,11 +1,12 @@
 package me.eccentric_nz.chemistry;
 
-import java.util.UUID;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+
+import java.util.UUID;
 
 public class ChemistryListener implements Listener {
 
@@ -17,7 +18,7 @@ public class ChemistryListener implements Listener {
 
     @EventHandler(priority = EventPriority.NORMAL)
     public void onInteract(PlayerInteractEvent event) {
-        final Player player = event.getPlayer();
+        Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
     }
 }
