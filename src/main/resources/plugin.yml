@@ -27,6 +27,9 @@ permissions:
   lab.combine:
     description: Allow a player to craft and open the 'Lab table' GUI.
     default: op
+  formula.show:
+    description: Allow a player to view a compound or product formula.
+    default: op
 commands:
   chemistry:
     description: Open the 'Atomic elements' creative GUI.
@@ -52,4 +55,9 @@ commands:
     description: Open the 'Lab table' GUI.
     usage: /<command>
     permission: lab.combine
+    permission-message: You don't have the permission <permission> to use this command
+  formula:
+    description: Show a compound or product formula.
+    usage: /<command> [compound|product]
+    permission: formula.show
     permission-message: You don't have the permission <permission> to use this command
