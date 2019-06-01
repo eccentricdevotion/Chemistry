@@ -1,4 +1,4 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.element;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

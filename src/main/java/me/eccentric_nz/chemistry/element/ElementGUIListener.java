@@ -1,5 +1,6 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.element;
 
+import me.eccentric_nz.chemistry.Chemistry;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

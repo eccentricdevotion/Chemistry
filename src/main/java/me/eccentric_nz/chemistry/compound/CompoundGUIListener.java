@@ -1,5 +1,7 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.compound;
 
+import me.eccentric_nz.chemistry.Chemistry;
+import me.eccentric_nz.chemistry.element.Element;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -12,8 +14,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.Arrays;
 
 public class CompoundGUIListener implements Listener {
 
@@ -87,11 +87,7 @@ public class CompoundGUIListener implements Listener {
         if (!f.isEmpty()) {
             for (Compound compound : Compound.values()) {
                 if (compound.getFormula().equals(f)) {
-                    ItemStack chemical = new ItemStack(Material.GLASS_BOTTLE, 1);
-                    ItemMeta cm = chemical.getItemMeta();
-                    cm.setDisplayName(compound.toString().replace("_", " "));
-                    cm.setLore(Arrays.asList(compound.getSymbol()));
-                    chemical.setItemMeta(cm);
+                    ItemStack chemical = CompoundBuilder.getCompound(compound);
                     // set slot 0 to the compound
                     inventory.setItem(0, chemical);
                     player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);

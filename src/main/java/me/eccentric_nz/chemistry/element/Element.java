@@ -1,4 +1,4 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.element;
 
 import java.util.HashMap;
 
@@ -122,15 +122,8 @@ public enum Element {
     Tennessine(117, "Ts"),
     Oganesson(118, "Og");
 
-    private final int atomicNumber;
-    private final String symbol;
     private static final HashMap<String, Element> bySymbol = new HashMap<>();
     private static final HashMap<Integer, Element> byAtomicNumber = new HashMap<>();
-
-    Element(int atomicNumber, String symbol) {
-        this.atomicNumber = atomicNumber;
-        this.symbol = symbol;
-    }
 
     static {
         for (Element e : values()) {
@@ -139,12 +132,12 @@ public enum Element {
         }
     }
 
-    public int getAtomicNumber() {
-        return atomicNumber;
-    }
+    private final int atomicNumber;
+    private final String symbol;
 
-    public String getSymbol() {
-        return symbol;
+    Element(int atomicNumber, String symbol) {
+        this.atomicNumber = atomicNumber;
+        this.symbol = symbol;
     }
 
     public static HashMap<String, Element> getBySymbol() {
@@ -153,5 +146,13 @@ public enum Element {
 
     public static HashMap<Integer, Element> getByAtomicNumber() {
         return byAtomicNumber;
+    }
+
+    public int getAtomicNumber() {
+        return atomicNumber;
+    }
+
+    public String getSymbol() {
+        return symbol;
     }
 }

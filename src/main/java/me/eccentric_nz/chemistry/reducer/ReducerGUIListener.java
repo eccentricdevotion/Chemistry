@@ -1,5 +1,8 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.reducer;
 
+import me.eccentric_nz.chemistry.Chemistry;
+import me.eccentric_nz.chemistry.compound.Compound;
+import me.eccentric_nz.chemistry.element.Element;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;

@@ -1,4 +1,4 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.reducer;
 
 import org.bukkit.Material;
 
