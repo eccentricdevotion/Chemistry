@@ -2,6 +2,8 @@ package me.eccentric_nz.chemistry;
 
 import me.eccentric_nz.chemistry.compound.CompoundCommand;
 import me.eccentric_nz.chemistry.compound.CompoundGUIListener;
+import me.eccentric_nz.chemistry.constructor.ConstructCommand;
+import me.eccentric_nz.chemistry.constructor.ConstructorGUIListener;
 import me.eccentric_nz.chemistry.element.ElementGUIListener;
 import me.eccentric_nz.chemistry.formula.FormulaCommand;
 import me.eccentric_nz.chemistry.formula.FormulaViewerListener;
@@ -36,6 +38,7 @@ public class Chemistry extends JavaPlugin {
         // register events
         pm.registerEvents(new ChemistryListener(this), this);
         pm.registerEvents(new ElementGUIListener(this), this);
+        pm.registerEvents(new ConstructorGUIListener(this), this);
         pm.registerEvents(new CompoundGUIListener(this), this);
         pm.registerEvents(new ReducerGUIListener(this), this);
         pm.registerEvents(new ProductGUIListener(this), this);
@@ -43,6 +46,7 @@ public class Chemistry extends JavaPlugin {
         pm.registerEvents(new FormulaViewerListener(this), this);
         // register commands
         getCommand("chemistry").setExecutor(new ChemistryCommand(this));
+        getCommand("construct").setExecutor(new ConstructCommand(this));
         getCommand("compound").setExecutor(new CompoundCommand(this));
         getCommand("reduce").setExecutor(new ReduceCommand(this));
         getCommand("product").setExecutor(new ProductCommand(this));
