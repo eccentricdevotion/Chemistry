@@ -1,6 +1,6 @@
 # Chemistry
 
-The periodic table, elements, compounds and cool sciencey things in Minecraft. This is a port / copy of the _Minecraft Education Edition Chemistry_ featiures to a Spigot / Paper plugin.
+The periodic table, elements, compounds and cool sciencey things in Minecraft. This is a port / copy of the _Minecraft Education Edition Chemistry_ features to a Spigot / Paper plugin.
 
 Requires a resource pack (included in the plugin) for best use.
 
