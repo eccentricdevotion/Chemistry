@@ -75,9 +75,10 @@ Requires a resource pack (included in the plugin) for best use.
 |   |   |
 | -------------: | ------------- |
 | _command:_     | `/formula [compound\|product]` |
+| _permission:_  | `formula.show` |
 | _use:_         | Use tab completion to select the compound or product you want to see the formula for.
 
-### Command permission
+### Permission to open GUIs by command
 
 |   |   |
 | -------------: | ------------- |
