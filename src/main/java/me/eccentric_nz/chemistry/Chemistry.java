@@ -1,5 +1,7 @@
 package me.eccentric_nz.chemistry;
 
+import me.eccentric_nz.chemistry.block.ChemistryBlockListener;
+import me.eccentric_nz.chemistry.block.ChemistryBlockRecipes;
 import me.eccentric_nz.chemistry.compound.CompoundCommand;
 import me.eccentric_nz.chemistry.compound.CompoundGUIListener;
 import me.eccentric_nz.chemistry.constructor.ConstructCommand;
@@ -36,9 +38,9 @@ public class Chemistry extends JavaPlugin {
         PluginDescriptionFile pdfFile = getDescription();
         pluginName = ChatColor.GOLD + "[" + pdfFile.getName() + "]" + ChatColor.RESET + " ";
         // add recipes
-        new ChemistryRecipes(this).addRecipes();
+        new ChemistryBlockRecipes(this).addRecipes();
         // register events
-        pm.registerEvents(new ChemistryListener(this), this);
+        pm.registerEvents(new ChemistryBlockListener(this), this);
         pm.registerEvents(new CreativeGUIListener(this), this);
         pm.registerEvents(new ElementGUIListener(this), this);
         pm.registerEvents(new ConstructorGUIListener(this), this);

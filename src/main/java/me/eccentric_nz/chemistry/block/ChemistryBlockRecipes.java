@@ -1,5 +1,6 @@
-package me.eccentric_nz.chemistry;
+package me.eccentric_nz.chemistry.block;
 
+import me.eccentric_nz.chemistry.Chemistry;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -9,12 +10,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChemistryRecipes {
+public class ChemistryBlockRecipes {
 
     private final Chemistry plugin;
     private final List<RecipeData> recipes = new ArrayList<>();
 
-    public ChemistryRecipes(Chemistry plugin) {
+    public ChemistryBlockRecipes(Chemistry plugin) {
         this.plugin = plugin;
         recipes.add(new RecipeData("Atomic elements", "creative_block", Material.WHITE_GLAZED_TERRACOTTA, Material.DIAMOND));
         recipes.add(new RecipeData("Chemical compounds", "compound_block", Material.ORANGE_GLAZED_TERRACOTTA, Material.REDSTONE));
