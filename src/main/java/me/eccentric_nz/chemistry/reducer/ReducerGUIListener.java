@@ -3,6 +3,7 @@ package me.eccentric_nz.chemistry.reducer;
 import me.eccentric_nz.chemistry.Chemistry;
 import me.eccentric_nz.chemistry.compound.Compound;
 import me.eccentric_nz.chemistry.element.Element;
+import me.eccentric_nz.chemistry.element.ElementBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -15,8 +16,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.Arrays;
 
 public class ReducerGUIListener implements Listener {
 
@@ -103,11 +102,7 @@ public class ReducerGUIListener implements Listener {
         for (String e : elements) {
             String[] split = e.split(":");
             Element element = Element.valueOf(split[0]);
-            ItemStack chemical = new ItemStack(Material.FEATHER, Integer.parseInt(split[1]));
-            ItemMeta cm = chemical.getItemMeta();
-            cm.setDisplayName(element.toString());
-            cm.setLore(Arrays.asList(element.getSymbol(), "" + element.getAtomicNumber()));
-            chemical.setItemMeta(cm);
+            ItemStack chemical = ElementBuilder.getElement(element);
             if (i > 25) {
                 i = 9;
             }

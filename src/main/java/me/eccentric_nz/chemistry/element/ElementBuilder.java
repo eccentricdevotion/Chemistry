@@ -12,7 +12,11 @@ public class ElementBuilder {
         ItemStack is = new ItemStack(Material.FEATHER, 1);
         ItemMeta im = is.getItemMeta();
         im.setDisplayName(element.toString());
-        im.setLore(Arrays.asList(element.getSymbol(), "" + element.getAtomicNumber()));
+        if (element.equals(Element.Unknown)) {
+            im.setLore(Arrays.asList("?", "?"));
+        } else {
+            im.setLore(Arrays.asList(element.getSymbol(), "" + element.getAtomicNumber()));
+        }
         is.setItemMeta(im);
         return is;
     }

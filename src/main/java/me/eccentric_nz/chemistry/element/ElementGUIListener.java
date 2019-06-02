@@ -2,7 +2,6 @@ package me.eccentric_nz.chemistry.element;
 
 import me.eccentric_nz.chemistry.Chemistry;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,9 +10,11 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
 
 public class ElementGUIListener implements Listener {
 
@@ -121,11 +122,7 @@ public class ElementGUIListener implements Listener {
         int r = 0;
         int c = 0;
         for (Element entry : Element.values()) {
-            ItemStack is = new ItemStack(Material.FEATHER, 1);
-            ItemMeta im = is.getItemMeta();
-            im.setDisplayName(entry.toString());
-            im.setLore(Arrays.asList(entry.getSymbol(), "" + entry.getAtomicNumber()));
-            is.setItemMeta(im);
+            ItemStack is = ElementBuilder.getElement(entry);
             stacks[r][c] = is;
             c++;
             if (c == 8) {
