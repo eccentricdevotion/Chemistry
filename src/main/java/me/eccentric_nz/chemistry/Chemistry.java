@@ -48,7 +48,9 @@ public class Chemistry extends JavaPlugin {
         pm.registerEvents(new LabGUIListener(this), this);
         pm.registerEvents(new FormulaViewerListener(this), this);
         // register commands
-        getCommand("chemistry").setExecutor(new ChemistryCommand(this));
+        ChemistryCommand chemistryCommand = new ChemistryCommand(this);
+        getCommand("chemistry").setExecutor(chemistryCommand);
+        getCommand("chemistry").setTabCompleter(chemistryCommand);
         getCommand("construct").setExecutor(new ConstructCommand(this));
         getCommand("compound").setExecutor(new CompoundCommand(this));
         getCommand("reduce").setExecutor(new ReduceCommand(this));

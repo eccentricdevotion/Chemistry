@@ -1,20 +1,24 @@
 package me.eccentric_nz.chemistry.creative;
 
+import com.google.common.collect.ImmutableList;
 import me.eccentric_nz.chemistry.Chemistry;
 import me.eccentric_nz.chemistry.element.ElementInventory;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.StringUtil;
 
-import java.util.Locale;
+import java.util.*;
 
-public class ChemistryCommand implements CommandExecutor {
+public class ChemistryCommand implements CommandExecutor, TabCompleter {
 
     private final Chemistry plugin;
+    private final List<String> ROOT_SUBS = Arrays.asList("elements", "compounds", "products", "lab");
 
     public ChemistryCommand(Chemistry plugin) {
         this.plugin = plugin;
@@ -67,5 +71,18 @@ public class ChemistryCommand implements CommandExecutor {
             }
         }
         return false;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
+        // Remember that we can return null to default to online player name matching
+        if (args.length <= 1) {
+            return partial(args[0], ROOT_SUBS);
+        }
+        return ImmutableList.of();
+    }
+
+    protected List<String> partial(String token, Collection<String> from) {
+        return StringUtil.copyPartialMatches(token, from, new ArrayList<>(from.size()));
     }
 }
