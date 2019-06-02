@@ -103,6 +103,7 @@ public class ReducerGUIListener implements Listener {
             String[] split = e.split(":");
             Element element = Element.valueOf(split[0]);
             ItemStack chemical = ElementBuilder.getElement(element);
+            chemical.setAmount(Integer.parseInt(split[1]));
             if (i > 25) {
                 i = 9;
             }
