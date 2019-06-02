@@ -13,7 +13,7 @@ permissions:
     description: Allow a player to open Chemistry GUIs by command.
     default: op
   chemistry.creative:
-    description: Allow a player to craft and open the 'Atomic elements' creative GUI.
+    description: Allow a player to craft and open the Chemistry creative GUIs.
     default: op
   construct.build:
     description: Allow a player to craft and open the 'Element constructor' GUI.
@@ -35,8 +35,8 @@ permissions:
     default: op
 commands:
   chemistry:
-    description: Open the 'Atomic elements' creative GUI.
-    usage: /<command>
+    description: Open a Chemistry creative GUI.
+    usage: /<command> [elements|compounds|lab|products]
     permission: chemistry.creative
     permission-message: You don't have the permission <permission> to use this command
   construct:
