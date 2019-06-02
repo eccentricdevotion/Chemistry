@@ -19,6 +19,7 @@ public class ChemistryRecipes {
         recipes.add(new RecipeData("Atomic elements", "creative_block", Material.WHITE_GLAZED_TERRACOTTA, Material.DIAMOND));
         recipes.add(new RecipeData("Chemical compounds", "compound_block", Material.ORANGE_GLAZED_TERRACOTTA, Material.REDSTONE));
         recipes.add(new RecipeData("Material reducer", "reducer_block", Material.MAGENTA_GLAZED_TERRACOTTA, Material.GOLD_NUGGET));
+        recipes.add(new RecipeData("Element constructor", "constructor_block", Material.LIGHT_BLUE_GLAZED_TERRACOTTA, Material.LAPIS_LAZULI));
         recipes.add(new RecipeData("Lab table", "lab_block", Material.YELLOW_GLAZED_TERRACOTTA, Material.COAL));
         recipes.add(new RecipeData("Product crafting", "crafting_block", Material.LIME_GLAZED_TERRACOTTA, Material.IRON_NUGGET));
     }
@@ -28,6 +29,7 @@ public class ChemistryRecipes {
             ItemStack is = new ItemStack(data.getItemMaterial(), 1);
             ItemMeta im = is.getItemMeta();
             im.setDisplayName(data.getDisplayName());
+            is.setItemMeta(im);
             NamespacedKey creative_key = new NamespacedKey(plugin, data.getNameSpacedKey());
             ShapedRecipe recipe = new ShapedRecipe(creative_key, is);
             recipe.shape("AAA", "ACA", "AAA");
