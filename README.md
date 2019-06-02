@@ -45,7 +45,7 @@ Requires a resource pack (included in the plugin) for best use.
 | _permission:_  | `reducer.use` |
 | _block:_       | magenta_glazed_terracotta |
 | _block / item / GUI name:_ | Material reducer |
-| _crafting:_    | ![Material reduction](/docs/material_reduction.png "Material reduction") |
+| _crafting:_    | ![Material reducer](/docs/material_reducer.png "Material reducer") |
 | _use:_         | Place a raw block into the top left slot of the GUI. Click the "Reduce" button to break the block into its atomic elements. |
 
 ### Lab table GUI
