@@ -80,7 +80,7 @@ public class ProductGUIListener implements Listener {
                 if ((material.equals(Material.GLASS_BOTTLE) || material.equals(Material.FEATHER)) && is.hasItemMeta()) {
                     ItemMeta im = is.getItemMeta();
                     if (im.hasDisplayName()) {
-                        builder.append(im.getDisplayName().replace(" ", "_")).append(pipe.contains(slot) ? "|" : ",");
+                        builder.append(im.getDisplayName()).append(pipe.contains(slot) ? "|" : ",");
                     }
                 } else {
                     builder.append(is.getType().toString()).append(pipe.contains(slot) ? "|" : ",");
