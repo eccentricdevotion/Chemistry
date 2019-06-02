@@ -87,17 +87,12 @@ public class ConstructorGUIListener implements Listener {
                         break;
                     case 16:
                         event.setCancelled(true);
-                        // get block type and data
+                        // get clicked ItemStack
                         ItemStack choice = view.getItem(16).clone();
                         choice.setAmount(event.getClick().equals(ClickType.SHIFT_LEFT) ? 64 : 1);
                         // add ItemStack to inventory if there is room
                         p.getInventory().addItem(choice);
                         break;
-//                    case 53:
-//                        // close
-//                        event.setCancelled(true);
-//                        close(p);
-//                        break;
                     default:
                         event.setCancelled(true);
                         break;
@@ -176,13 +171,4 @@ public class ConstructorGUIListener implements Listener {
         }
         view.setItem(16, null);
     }
-
-//    /**
-//     * Closes the inventory.
-//     *
-//     * @param p the player using the GUI
-//     */
-//    private void close(Player p) {
-//        plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, p::closeInventory, 1L);
-//    }
 }

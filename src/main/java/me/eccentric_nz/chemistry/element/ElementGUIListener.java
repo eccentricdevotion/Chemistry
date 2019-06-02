@@ -77,7 +77,7 @@ public class ElementGUIListener implements Listener {
                         break;
                     default:
                         event.setCancelled(true);
-                        // get block type and data
+                        // get clicked ItemStack
                         ItemStack choice = view.getItem(slot).clone();
                         choice.setAmount(event.getClick().equals(ClickType.SHIFT_LEFT) ? 64 : 1);
                         // add ItemStack to inventory if there is room

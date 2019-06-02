@@ -15,7 +15,7 @@ public class ElementInventory {
     private ItemStack[] getItemStack() {
         ItemStack[] stack = new ItemStack[54];
         int i = 0;
-        // get BLOCKS
+        // get elements
         for (Element entry : Element.values()) {
             if (i > 52) {
                 break;
