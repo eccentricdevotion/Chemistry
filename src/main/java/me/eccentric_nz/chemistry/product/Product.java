@@ -15,6 +15,7 @@ public enum Product {
     Yellow_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,YELLOW_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
     Lime_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,LIME_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
     Pink_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,PINK_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
+    Gray_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,GRAY_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
     Cyan_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,CYAN_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
     Purple_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,PURPLE_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
     Blue_Glow_Stick("Polyethylene,Luminol,Polyethylene|Polyethylene,BLUE_DYE,Polyethylene|Polyethylene,Hydrogen Peroxide,Polyethylene", Material.STICK),
