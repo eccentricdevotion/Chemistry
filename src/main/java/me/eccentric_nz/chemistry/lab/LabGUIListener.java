@@ -81,8 +81,6 @@ public class LabGUIListener implements Listener {
                 } else {
                     builder.append(is.getType().toString()).append(",");
                 }
-            } else {
-                builder.append("-").append(",");
             }
         }
         String recipe = builder.toString().substring(0, builder.length() - 1);
@@ -101,7 +99,7 @@ public class LabGUIListener implements Listener {
         cm.setDisplayName(product.toString().replace("_", " "));
         crafted.setItemMeta(cm);
         // set slot 14 to the crafted product
-        inventory.setItem(14, crafted);
+        inventory.setItem(0, crafted);
         player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
         // remove the crafting item stacks
         for (int i : slots) {
