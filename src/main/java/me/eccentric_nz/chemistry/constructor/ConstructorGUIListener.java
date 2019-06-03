@@ -131,6 +131,7 @@ public class ConstructorGUIListener implements Listener {
         ItemStack ones = view.getItem(2 + offset);
         ItemMeta oneMeta = ones.getItemMeta();
         oneMeta.setDisplayName("" + oneInt);
+        oneMeta.setCustomModelData(10000010 + oneInt);
         ones.setItemMeta(oneMeta);
         ItemStack tens = view.getItem(1 + offset);
         if (tenInt > 0) {
@@ -139,6 +140,7 @@ public class ConstructorGUIListener implements Listener {
             }
             ItemMeta tenMeta = tens.getItemMeta();
             tenMeta.setDisplayName("" + tenInt);
+            tenMeta.setCustomModelData(10000010 + tenInt);
             tens.setItemMeta(tenMeta);
             view.setItem(1 + offset, tens);
         } else {
@@ -151,6 +153,7 @@ public class ConstructorGUIListener implements Listener {
             }
             ItemMeta hundredMeta = hundreds.getItemMeta();
             hundredMeta.setDisplayName("" + hundredInt);
+            hundredMeta.setCustomModelData(10000010 + hundredInt);
             hundreds.setItemMeta(hundredMeta);
             view.setItem(0 + offset, hundreds);
         } else {

@@ -9,6 +9,7 @@ public class LabBuilder {
         ItemStack is = new ItemStack(lab.getItemMaterial(), 1);
         ItemMeta im = is.getItemMeta();
         im.setDisplayName(lab.toString().replace("_", " "));
+        im.setCustomModelData(10000001 + lab.ordinal());
         is.setItemMeta(im);
         return is;
     }

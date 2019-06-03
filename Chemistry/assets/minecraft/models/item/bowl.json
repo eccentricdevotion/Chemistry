@@ -1,0 +1,25 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/bowl"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data":10000001}, "model": "item/gui/check"},
+      {"predicate": {"custom_model_data":10000002}, "model": "item/gui/close"},
+      {"predicate": {"custom_model_data":10000003}, "model": "item/gui/craft"},
+      {"predicate": {"custom_model_data":10000004}, "model": "item/gui/electrons"},
+      {"predicate": {"custom_model_data":10000005}, "model": "item/gui/neutrons"},
+      {"predicate": {"custom_model_data":10000006}, "model": "item/gui/protons"},
+      {"predicate": {"custom_model_data":10000007}, "model": "item/gui/reduce"},
+      {"predicate": {"custom_model_data":10000010}, "model": "item/gui/number_0"},
+      {"predicate": {"custom_model_data":10000011}, "model": "item/gui/number_1"},
+      {"predicate": {"custom_model_data":10000012}, "model": "item/gui/number_2"},
+      {"predicate": {"custom_model_data":10000013}, "model": "item/gui/number_3"},
+      {"predicate": {"custom_model_data":10000014}, "model": "item/gui/number_4"},
+      {"predicate": {"custom_model_data":10000015}, "model": "item/gui/number_5"},
+      {"predicate": {"custom_model_data":10000016}, "model": "item/gui/number_6"},
+      {"predicate": {"custom_model_data":10000017}, "model": "item/gui/number_7"},
+      {"predicate": {"custom_model_data":10000018}, "model": "item/gui/number_8"},
+      {"predicate": {"custom_model_data":10000019}, "model": "item/gui/number_9"}
+    ]
+}

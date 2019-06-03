@@ -32,18 +32,21 @@ public class ElementInventory {
         ItemStack scroll_up = new ItemStack(Material.ARROW, 1);
         ItemMeta uim = scroll_up.getItemMeta();
         uim.setDisplayName("Scroll up");
+        uim.setCustomModelData(10000001);
         scroll_up.setItemMeta(uim);
         stack[8] = scroll_up;
         // scroll down
         ItemStack scroll_down = new ItemStack(Material.ARROW, 1);
         ItemMeta dim = scroll_down.getItemMeta();
         dim.setDisplayName("Scroll down");
+        dim.setCustomModelData(10000002);
         scroll_down.setItemMeta(dim);
         stack[35] = scroll_down;
         // close
         ItemStack close = new ItemStack(Material.BOWL, 1);
         ItemMeta close_im = close.getItemMeta();
         close_im.setDisplayName("Close");
+        close_im.setCustomModelData(10000002);
         close.setItemMeta(close_im);
         stack[53] = close;
         return stack;

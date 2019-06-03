@@ -17,6 +17,7 @@ public class ElementBuilder {
         } else {
             im.setLore(Arrays.asList(element.getSymbol(), "" + element.getAtomicNumber()));
         }
+        im.setCustomModelData(10000000 + element.getAtomicNumber());
         is.setItemMeta(im);
         return is;
     }

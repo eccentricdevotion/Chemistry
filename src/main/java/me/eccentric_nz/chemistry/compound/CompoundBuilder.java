@@ -13,6 +13,7 @@ public class CompoundBuilder {
         ItemMeta im = is.getItemMeta();
         im.setDisplayName(compound.toString().replace("_", " "));
         im.setLore(Arrays.asList(compound.getSymbol()));
+        im.setCustomModelData(10000001 + compound.ordinal());
         is.setItemMeta(im);
         return is;
     }

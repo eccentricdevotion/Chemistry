@@ -1,0 +1,12 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/arrow"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data":10000001}, "model": "item/gui/scroll_up"},
+      {"predicate": {"custom_model_data":10000002}, "model": "item/gui/scroll_down"},
+      {"predicate": {"custom_model_data":10000003}, "model": "item/gui/plus"},
+      {"predicate": {"custom_model_data":10000004}, "model": "item/gui/minus"}
+    ]
+}

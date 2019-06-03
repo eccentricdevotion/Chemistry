@@ -14,16 +14,18 @@ public class ProductInventory {
 
     private ItemStack[] getItemStack() {
         ItemStack[] stack = new ItemStack[27];
-        // check recipe
-        ItemStack scroll_down = new ItemStack(Material.BOWL, 1);
-        ItemMeta dim = scroll_down.getItemMeta();
-        dim.setDisplayName("Craft");
-        scroll_down.setItemMeta(dim);
-        stack[17] = scroll_down;
+        // craft recipe
+        ItemStack craft = new ItemStack(Material.BOWL, 1);
+        ItemMeta craft_im = craft.getItemMeta();
+        craft_im.setDisplayName("Craft");
+        craft.setItemMeta(craft_im);
+        craft_im.setCustomModelData(10000003);
+        stack[17] = craft;
         // close
         ItemStack close = new ItemStack(Material.BOWL, 1);
         ItemMeta close_im = close.getItemMeta();
         close_im.setDisplayName("Close");
+        close_im.setCustomModelData(10000002);
         close.setItemMeta(close_im);
         stack[26] = close;
         return stack;

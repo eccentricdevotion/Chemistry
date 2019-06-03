@@ -1,0 +1,36 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "item/wooden_hoe"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data":10000004}, "model": "item/products/white_glow_stick"},
+      {"predicate": {"custom_model_data":10000005}, "model": "item/products/orange_glow_stick"},
+      {"predicate": {"custom_model_data":10000006}, "model": "item/products/magenta_glow_stick"},
+      {"predicate": {"custom_model_data":10000007}, "model": "item/products/light_blue_glow_stick"},
+      {"predicate": {"custom_model_data":10000008}, "model": "item/products/yellow_glow_stick"},
+      {"predicate": {"custom_model_data":10000009}, "model": "item/products/lime_glow_stick"},
+      {"predicate": {"custom_model_data":10000010}, "model": "item/products/pink_glow_stick"},
+      {"predicate": {"custom_model_data":10000011}, "model": "item/products/gray_glow_stick"},
+      {"predicate": {"custom_model_data":10000012}, "model": "item/products/cyan_glow_stick"},
+      {"predicate": {"custom_model_data":10000013}, "model": "item/products/purple_glow_stick"},
+      {"predicate": {"custom_model_data":10000014}, "model": "item/products/blue_glow_stick"},
+      {"predicate": {"custom_model_data":10000015}, "model": "item/products/brown_glow_stick"},
+      {"predicate": {"custom_model_data":10000016}, "model": "item/products/green_glow_stick"},
+      {"predicate": {"custom_model_data":10000017}, "model": "item/products/red_glow_stick"},
+      {"predicate": {"custom_model_data":12000004}, "model": "item/products/white_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000005}, "model": "item/products/orange_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000006}, "model": "item/products/magenta_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000007}, "model": "item/products/light_blue_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000008}, "model": "item/products/yellow_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000009}, "model": "item/products/lime_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000010}, "model": "item/products/pink_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000011}, "model": "item/products/gray_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000012}, "model": "item/products/cyan_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000013}, "model": "item/products/purple_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000014}, "model": "item/products/blue_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000015}, "model": "item/products/brown_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000016}, "model": "item/products/green_glow_stick_active"},
+      {"predicate": {"custom_model_data":12000017}, "model": "item/products/red_glow_stick_active"}
+    ]
+}

@@ -39,6 +39,7 @@ public class ProductsCreativeInventory {
         ItemStack close = new ItemStack(Material.BOWL, 1);
         ItemMeta close_im = close.getItemMeta();
         close_im.setDisplayName("Close");
+        close_im.setCustomModelData(10000002);
         close.setItemMeta(close_im);
         stack[53] = close;
         return stack;
