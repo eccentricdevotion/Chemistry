@@ -13,6 +13,8 @@ import me.eccentric_nz.chemistry.formula.FormulaCommand;
 import me.eccentric_nz.chemistry.formula.FormulaViewerListener;
 import me.eccentric_nz.chemistry.lab.LabCommand;
 import me.eccentric_nz.chemistry.lab.LabGUIListener;
+import me.eccentric_nz.chemistry.product.GlowStickListener;
+import me.eccentric_nz.chemistry.product.GlowStickRunnable;
 import me.eccentric_nz.chemistry.product.ProductCommand;
 import me.eccentric_nz.chemistry.product.ProductGUIListener;
 import me.eccentric_nz.chemistry.reducer.ReduceCommand;
@@ -49,6 +51,7 @@ public class Chemistry extends JavaPlugin {
         pm.registerEvents(new ProductGUIListener(this), this);
         pm.registerEvents(new LabGUIListener(this), this);
         pm.registerEvents(new FormulaViewerListener(this), this);
+        pm.registerEvents(new GlowStickListener(this), this);
         // register commands
         ChemistryCommand chemistryCommand = new ChemistryCommand(this);
         getCommand("chemistry").setExecutor(chemistryCommand);
@@ -61,6 +64,8 @@ public class Chemistry extends JavaPlugin {
         FormulaCommand formulaCommand = new FormulaCommand(this);
         getCommand("formula").setExecutor(formulaCommand);
         getCommand("formula").setTabCompleter(formulaCommand);
+        // start glow stick runnable
+        getServer().getScheduler().scheduleSyncRepeatingTask(this, new GlowStickRunnable(this), 200L, 200L);
     }
 
     /**

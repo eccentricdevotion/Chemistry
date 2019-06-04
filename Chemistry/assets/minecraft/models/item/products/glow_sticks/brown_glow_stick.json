@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "item/glow_sticks/lime_plastic",
-		"particle": "item/glow_sticks/lime_plastic"
+		"0": "item/glow_sticks/brown_plastic",
+		"particle": "item/glow_sticks/brown_plastic"
 	},
 	"elements": [
 		{
@@ -20,10 +20,12 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"translation": [0.5, 2.25, 0.75]
+			"translation": [0.5, 2.25, 0.75],
+			"scale": [0.55, 0.55, 0.55]
 		},
 		"thirdperson_lefthand": {
-			"translation": [-0.5, 2.25, 0.75]
+			"translation": [-0.5, 2.25, 0.75],
+			"scale": [0.55, 0.55, 0.55]
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 0, 6.5],

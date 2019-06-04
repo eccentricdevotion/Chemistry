@@ -1,4 +1,0 @@
-type=item
-items=minecraft:torch
-texture=purple_torch.png
-nbt.display.Name=Purple Torch
