@@ -7,10 +7,7 @@ import me.eccentric_nz.chemistry.element.ElementInventory;
 import me.eccentric_nz.chemistry.lab.LabInventory;
 import me.eccentric_nz.chemistry.product.ProductInventory;
 import me.eccentric_nz.chemistry.reducer.ReducerInventory;
-import org.bukkit.ChatColor;
-import org.bukkit.Chunk;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -120,6 +117,10 @@ public class ChemistryBlockListener implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void onChemistryBlockBreak(BlockBreakEvent event) {
+        Player player = event.getPlayer();
+        if (player.getGameMode().equals(GameMode.CREATIVE)) {
+            return;
+        }
         Block block = event.getBlock();
         if (!blocks.containsKey(event.getBlock().getType())) {
             return;
