@@ -1,6 +1,7 @@
 package me.eccentric_nz.chemistry.product;
 
 import me.eccentric_nz.chemistry.Chemistry;
+import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -10,13 +11,16 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataType;
 
 public class GlowStickListener implements Listener {
 
     private final Chemistry plugin;
+    private final NamespacedKey namespacedKey;
 
     public GlowStickListener(Chemistry plugin) {
         this.plugin = plugin;
+        namespacedKey = new NamespacedKey(this.plugin, "glow_stick_time");
     }
 
     @EventHandler
@@ -32,6 +36,7 @@ public class GlowStickListener implements Listener {
                     int cmd = im.getCustomModelData() + 2000000;
                     im.setCustomModelData(cmd);
                     im.addEnchant(Enchantment.LOYALTY, 1, true);
+                    im.getPersistentDataContainer().set(namespacedKey, PersistentDataType.INTEGER, 100);
                     is.setItemMeta(im);
                 }
             }
