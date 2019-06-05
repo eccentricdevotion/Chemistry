@@ -13,10 +13,7 @@ import me.eccentric_nz.chemistry.formula.FormulaCommand;
 import me.eccentric_nz.chemistry.formula.FormulaViewerListener;
 import me.eccentric_nz.chemistry.lab.LabCommand;
 import me.eccentric_nz.chemistry.lab.LabGUIListener;
-import me.eccentric_nz.chemistry.product.GlowStickListener;
-import me.eccentric_nz.chemistry.product.GlowStickRunnable;
-import me.eccentric_nz.chemistry.product.ProductCommand;
-import me.eccentric_nz.chemistry.product.ProductGUIListener;
+import me.eccentric_nz.chemistry.product.*;
 import me.eccentric_nz.chemistry.reducer.ReduceCommand;
 import me.eccentric_nz.chemistry.reducer.ReducerGUIListener;
 import org.bukkit.ChatColor;
@@ -52,6 +49,7 @@ public class Chemistry extends JavaPlugin {
         pm.registerEvents(new LabGUIListener(this), this);
         pm.registerEvents(new FormulaViewerListener(this), this);
         pm.registerEvents(new GlowStickListener(this), this);
+        pm.registerEvents(new SparklerListener(this), this);
         // register commands
         ChemistryCommand chemistryCommand = new ChemistryCommand(this);
         getCommand("chemistry").setExecutor(chemistryCommand);
