@@ -4,7 +4,7 @@ import org.bukkit.Material;
 
 public class GlowStickMaterial {
 
-    public static boolean isStainedGlassPane(Material material) {
+    public static boolean isCorrectMaterial(Material material) {
         switch (material) {
             case WHITE_STAINED_GLASS_PANE:
             case ORANGE_STAINED_GLASS_PANE:

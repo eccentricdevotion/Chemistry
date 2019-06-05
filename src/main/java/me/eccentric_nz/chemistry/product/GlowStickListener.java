@@ -28,9 +28,9 @@ public class GlowStickListener implements Listener {
         if (event.getAction().equals(Action.RIGHT_CLICK_AIR)) {
             Player player = event.getPlayer();
             ItemStack is = event.getItem();
-            if (is != null && GlowStickMaterial.isStainedGlassPane(is.getType()) && is.hasItemMeta()) {
+            if (is != null && GlowStickMaterial.isCorrectMaterial(is.getType()) && is.hasItemMeta()) {
                 ItemMeta im = is.getItemMeta();
-                if (im.hasDisplayName() && im.getDisplayName().endsWith("Glow Stick") && im.hasCustomModelData()) {
+                if (im.hasDisplayName() && im.getDisplayName().endsWith("Glow Stick") && im.hasCustomModelData() && !im.hasEnchant(Enchantment.LOYALTY)) {
                     player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_HIT, 1.0f, 1.0f);
                     // switch custom data models e.g. 10000008 -> 12000008
                     int cmd = im.getCustomModelData() + 2000000;
