@@ -19,12 +19,10 @@ import java.util.HashMap;
 public class SparklerListener implements Listener {
 
     private final Chemistry plugin;
-    //    private final NamespacedKey namespacedKey;
     private final HashMap<String, BlockData> colours = new HashMap<>();
 
     public SparklerListener(Chemistry plugin) {
         this.plugin = plugin;
-//        namespacedKey = new NamespacedKey(this.plugin, "sparkler_time");
         colours.put("Orange Sparkler", Material.ORANGE_WOOL.createBlockData());
         colours.put("Blue Sparkler", Material.BLUE_WOOL.createBlockData());
         colours.put("Green Sparkler", Material.GREEN_WOOL.createBlockData());
@@ -46,11 +44,10 @@ public class SparklerListener implements Listener {
                     im.setCustomModelData(cmd);
                     // set custom data on sparkler
                     im.addEnchant(Enchantment.LOYALTY, 1, true);
-//                    im.getPersistentDataContainer().set(namespacedKey, PersistentDataType.INTEGER, 100);
                     is.setItemMeta(im);
                     // start sparkler runnable
                     BlockData colour = colours.get(ChatColor.stripColor(im.getDisplayName()));
-                    SparklerRunnable runnable = new SparklerRunnable(player, colour, System.currentTimeMillis());
+                    SparklerRunnable runnable = new SparklerRunnable(plugin, player, colour, System.currentTimeMillis());
                     int taskId = plugin.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, runnable, 1L, 2L);
                     runnable.setTaskId(taskId);
                 }
