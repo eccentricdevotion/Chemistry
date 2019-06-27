@@ -38,10 +38,12 @@ public class CreativeGUIListener implements Listener {
                     default:
                         event.setCancelled(true);
                         // get clicked ItemStack
-                        ItemStack choice = view.getItem(slot).clone();
-                        choice.setAmount(event.getClick().equals(ClickType.SHIFT_LEFT) ? 64 : 1);
-                        // add ItemStack to inventory if there is room
-                        p.getInventory().addItem(choice);
+                        if (view.getItem(slot) != null) {
+                            ItemStack choice = view.getItem(slot).clone();
+                            choice.setAmount(event.getClick().equals(ClickType.SHIFT_LEFT) ? 64 : 1);
+                            // add ItemStack to inventory if there is room
+                            p.getInventory().addItem(choice);
+                        }
                         break;
                 }
             } else {
