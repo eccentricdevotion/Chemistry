@@ -5,9 +5,6 @@ name: Chemistry
 load: POSTWORLD
 version: 1.0.0
 api-version: 1.14
-#website: http://dev.bukkit.org/projects/chemistry
-#dev-url: http://dev.bukkit.org/projects/chemistry
-#url: http://dev.bukkit.org/projects/chemistry
 permissions:
   chemistry.command:
     description: Allow a player to open Chemistry GUIs by command.
@@ -40,7 +37,7 @@ commands:
     permission: chemistry.creative
     permission-message: You don't have the permission <permission> to use this command
   construct:
-    description: Open the 'Chemical compounds' creation GUI.
+    description: Open the 'Element constructor' GUI.
     usage: /<command>
     permission: compound.create
     permission-message: You don't have the permission <permission> to use this command
